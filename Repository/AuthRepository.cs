@@ -21,8 +21,9 @@ namespace PortfolioAuthorizationApi.Repository
         /// Static data for user model is created.
         /// </summary>
         private static Dictionary<int, string> users = new Dictionary<int, string>() {
-            { 12345,"admin1"},
-            {789,"admin2" }
+            {12345,"admin1"},
+            {789,"admin2" },
+            {1234,"Manish@123" }
         };
 
 
@@ -61,7 +62,7 @@ namespace PortfolioAuthorizationApi.Repository
                     {
                         new Claim(ClaimTypes.Name, user.PortFolioID.ToString())
                     }),
-                    Expires = DateTime.UtcNow.AddHours(1),
+                    Expires = DateTime.UtcNow.AddMinutes(15),
                     SigningCredentials = new SigningCredentials(
                         new SymmetricSecurityKey(key),
                         SecurityAlgorithms.HmacSha256Signature)
