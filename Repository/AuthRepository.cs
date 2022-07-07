@@ -38,6 +38,7 @@ namespace PortfolioAuthorizationApi.Repository
         }
 
         /// <summary>
+        /// <summary>
         ///  Generates the token if the user credentials are correct.
         /// </summary>
         /// <param name="user"></param>
